@@ -51,5 +51,14 @@ int main()
         printf("%i\n",ptr->number);
     }
 
+    node *tmp=list;
+    while(list!=NULL)
+        {
+            tmp = list->next;
+            free(list);
+            list = tmp;
+        }
+
     return 0;
+    
 }
